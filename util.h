@@ -3,7 +3,6 @@
 #ifndef UTIL_H
 #define UTIL_H
 
-
 #define max(a, b) ( ((a) > (b)) ? (a) : (b) )
 #define min(a, b) ( ((a) < (b)) ? (a) : (b) )
 #define array_count(arr) (sizeof(arr) / sizeof(arr[0]))
@@ -42,6 +41,7 @@ struct AutoTimer {
         double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
         if (s_label)
             printf("%s time spent(s): %f\n", s_label, time_spent);
+        s_label = 0;
         return time_spent;
     }
 };
